@@ -19,12 +19,5 @@ module App1
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    config.assets.enabled = true
-    # Enable fonts folder to App Root (add app/assets/fonts to the asset path)
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
-    config.assets.precompile = ['application.js', 'application.css', 'circle-carousel.js', 'mynetwork-circle-carousel.js', 'api/v1/charts/pie_chart.js', 'api/v1/charts/column_chart.js', 'api/v1/charts/analytics_preview_column_chart.js']
-    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
-    config.assets.precompile += %w[*.png *.jpg *.jpeg *.gif *.ico]
-    config.exceptions_app = self.routes
 end
 end
